@@ -1,35 +1,321 @@
+```css
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial;
-    background-color: #0f172a;
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #0f172a;
     color: white;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+
+    padding: 15px;
 }
 
+/* CONTENEDOR */
+
 .contenedor {
-    background-color: #1e293b;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
+    width: 100%;
+    max-width: 380px;
+
+    background: #1e293b;
+
+    padding: 24px;
+
+    border-radius: 14px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
+
+/* TITULO */
+
+h1 {
+    margin: 0 0 20px;
+
+    text-align: center;
+
+    font-size: 24px;
+}
+
+/* FORMULARIO */
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+
+    gap: 13px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+label {
+    font-size: 14px;
+
+    color: #cbd5e1;
+}
+
+/* INPUTS */
 
 input {
     width: 100%;
-    margin-bottom: 10px;
-    padding: 5px;
+
+    height: 40px;
+
+    padding: 8px 10px;
+
+    border: 1px solid #475569;
+    border-radius: 7px;
+
+    background: #0f172a;
+
+    color: white;
+
+    font-size: 14px;
+
+    outline: none;
 }
+
+input:focus {
+    border-color: #22c55e;
+}
+
+/* BOTON */
 
 button {
     width: 100%;
-    padding: 10px;
-    background-color: #22c55e;
+
+    height: 42px;
+
+    margin-top: 3px;
+
     border: none;
+    border-radius: 7px;
+
+    background: #22c55e;
+
     color: white;
+
+    font-size: 14px;
+    font-weight: bold;
+
     cursor: pointer;
+
+    transition: background 0.2s;
 }
 
 button:hover {
-    background-color: #16a34a;
+    background: #16a34a;
 }
+
+/* RESULTADOS */
+
+.resultados {
+    margin-top: 20px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid #475569;
+}
+
+h2 {
+    margin: 0 0 10px;
+
+    font-size: 18px;
+}
+
+.resultados p {
+    margin: 7px 0;
+
+    padding: 9px 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #0f172a;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+}
+
+.resultados strong {
+    color: #22c55e;
+}
+
+.resultados .total {
+    margin-top: 10px;
+
+    background: #14532d;
+
+    font-size: 15px;
+}
+
+.resultados .total strong {
+    color: #86efac;
+
+    font-size: 17px;
+}
+
+/* =================================
+   TABLET
+================================= */
+
+@media (min-width: 600px) {
+
+    .contenedor {
+        max-width: 420px;
+
+        padding: 28px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    input {
+        height: 42px;
+    }
+
+    button {
+        height: 44px;
+    }
+}
+
+/* =================================
+   CELULARES PEQUEÑOS
+================================= */
+
+@media (max-width: 380px) {
+
+    body {
+        padding: 8px;
+    }
+
+    .contenedor {
+        max-width: 100%;
+
+        padding: 18px;
+
+        border-radius: 10px;
+    }
+
+    h1 {
+        margin-bottom: 15px;
+
+        font-size: 20px;
+    }
+
+    .formulario {
+        gap: 10px;
+    }
+
+    label {
+        font-size: 13px;
+    }
+
+    input {
+        height: 37px;
+
+        padding: 6px 9px;
+
+        font-size: 13px;
+    }
+
+    button {
+        height: 39px;
+
+        font-size: 13px;
+    }
+
+    .resultados {
+        margin-top: 15px;
+
+        padding-top: 12px;
+    }
+
+    h2 {
+        margin-bottom: 7px;
+
+        font-size: 16px;
+    }
+
+    .resultados p {
+        margin: 5px 0;
+
+        padding: 7px 9px;
+
+        font-size: 13px;
+    }
+
+    .resultados .total {
+        margin-top: 7px;
+    }
+
+    .resultados .total strong {
+        font-size: 15px;
+    }
+}
+
+/* =================================
+   CELULARES MUY BAJOS
+================================= */
+
+@media (max-height: 650px) {
+
+    body {
+        align-items: flex-start;
+
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    .contenedor {
+        padding: 15px;
+    }
+
+    h1 {
+        margin-bottom: 12px;
+
+        font-size: 19px;
+    }
+
+    .formulario {
+        gap: 8px;
+    }
+
+    .campo {
+        gap: 3px;
+    }
+
+    input {
+        height: 35px;
+    }
+
+    button {
+        height: 37px;
+    }
+
+    .resultados {
+        margin-top: 12px;
+        padding-top: 10px;
+    }
+
+    .resultados p {
+        margin: 4px 0;
+        padding: 6px 8px;
+    }
+}
+```

@@ -1,33 +1,69 @@
+
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Comisiones</title>
+
     <link rel="stylesheet" href="ventas.css">
+
     <script src="ventas.js"></script>
+    <script src="utilitarios.js"></script>
 </head>
+
 <body>
 
     <div class="contenedor">
+
         <h1>Calculadora de Comisiones</h1>
 
-        <label>Salario Base:</label>
-        <input type="text" id="txtSueldoBase">
+        <div class="formulario">
 
-        <label>Número de ventas:</label>
-        <input type="text" id="txtVentas">
+            <div class="campo">
+                <label for="txtSueldoBase">Salario Base</label>
+                <input type="text" id="txtSueldoBase" placeholder="Ej: 500">
+            </div>
 
-        <label>Precio del producto:</label>
-        <input type="text" id="txtPrecio">
+            <div class="campo">
+                <label for="txtVentas">Número de ventas</label>
+                <input type="text" id="txtVentas" placeholder="Ej: 20">
+            </div>
 
-        <button onclick="calcular()">Calcular Comisión</button>
+            <div class="campo">
+                <label for="txtPrecio">Precio del producto</label>
+                <input type="text" id="txtPrecio" placeholder="Ej: 20">
+            </div>
 
-        <h2>Resultados</h2>
-        <p>Salario Base: <span id="spSueldoBase"></span></p>
-        <p>Comisión: <span id="spComision"></span></p>
-        <p>Total: <span id="spTotal"></span></p>
+            <button onclick="calcular()">Calcular Comisión</button>
+
+        </div>
+
+        <div class="resultados">
+
+            <h2>Resultados</h2>
+
+            <p>
+                <span>Salario Base:</span>
+                <strong>$<span id="spSueldoBase"></span></strong>
+            </p>
+
+            <p>
+                <span>Comisión:</span>
+                <strong>$<span id="spComision"></span></strong>
+            </p>
+
+            <p class="total">
+                <span>Total:</span>
+                <strong>$<span id="spTotal"></span></strong>
+            </p>
+
+        </div>
+
     </div>
 
-    
 </body>
+
 </html>
+
